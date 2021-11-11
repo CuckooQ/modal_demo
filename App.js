@@ -22,8 +22,8 @@ class App {
   openModal() {
     const modalRootEl = document.getElementById("modal-root");
     const modalEl = modalRootEl.querySelector(".modal");
-    modalEl.show();
     modalRootEl.querySelector(".modal-wrapper").classList.add("show");
+    modalEl.classList.add("show");
   }
 
   click({ target }) {

@@ -18,7 +18,7 @@ class Modal {
   template() {
     return `
       <div class="modal-wrapper">
-        <dialog class="modal">
+        <div class="modal">
           <div class="modal__header">
             <div class="modal-title">
               DEMO
@@ -34,15 +34,15 @@ class Modal {
             </div>
           </div>
           <div class="modal__footer"></div>
-        </dialog>
+        </div>
       </div>
       
     `;
   }
 
   close() {
-    this.target.querySelector(".modal").close();
     this.target.querySelector(".modal-wrapper").classList.remove("show");
+    this.target.querySelector(".modal").classList.remove("show");
   }
 
   click({ target }) {
